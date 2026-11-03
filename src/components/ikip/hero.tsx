@@ -18,7 +18,7 @@ const STATS = [
 /** Hero-блок главной: слоган, осциллограмма, статистика и сигнальный тикер */
 export function Hero({ onNavigate, onOpenArticle }: HeroProps) {
   const [typed, setTyped] = useState(0)
-  const phrase = 'измеряй мир точно'
+  const phrase = 'измеряй или проиграешь'
   useEffect(() => {
     if (typed >= phrase.length) return
     const t = setTimeout(() => setTyped((v) => v + 1), 70)
@@ -49,7 +49,7 @@ export function Hero({ onNavigate, onOpenArticle }: HeroProps) {
           <div>
             <p className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/5 px-3.5 py-1.5 font-mono text-xs text-cyan-300">
               <span className="led" />
-              радиоизмерения · электроизмерения · экология · метрология
+              радиоизмерения · электроизмерения · метрология
             </p>
             <h1 className="font-display mt-6 text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
               Всё о современных
@@ -61,8 +61,8 @@ export function Hero({ onNavigate, onOpenArticle }: HeroProps) {
               <span className="caret-blink">_</span>
             </p>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Новости о новинках мировых производителей на русском языке
-              и глубокая аналитика: сравнения, тесты и разбор метрологии —
+              Новости об измерительных приборах, технологиях,
+              сравнения, тесты —
               для инженеров, сервисных мастерских и радиолюбителей.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -70,7 +70,7 @@ export function Hero({ onNavigate, onOpenArticle }: HeroProps) {
                 onClick={() => onNavigate('news')}
                 className="glow-neon rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.03] active:scale-95"
               >
-                Свежие новости
+                Новости
               </button>
               <button
                 onClick={() => onNavigate('reviews')}
