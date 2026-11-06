@@ -58,12 +58,26 @@ export function ArticleView({ article, onBack, onOpen, onNavigate }: ArticleView
         </div>
       </header>
 
-      {/* Обложка */}
-      <Cover
-        style={article.coverStyle}
-        uid={`full-${article.id}`}
-        className="mt-7 h-60 rounded-2xl border border-border sm:h-72"
-      />
+      {/* Обложка: фото прибора (если задано) или генеративная графика */}
+      {article.image ? (
+        <figure className="mt-7">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={article.image}
+            alt={`Фото: ${article.title}`}
+            className="w-full rounded-2xl border border-border bg-secondary/30"
+          />
+          <figcaption className="mt-2 text-right font-mono text-[11px] uppercase tracking-wider text-muted-foreground">
+            {article.manufacturer} · фото производителя
+          </figcaption>
+        </figure>
+      ) : (
+        <Cover
+          style={article.coverStyle}
+          uid={`full-${article.id}`}
+          className="mt-7 h-60 rounded-2xl border border-border sm:h-72"
+        />
+      )}
 
       {/* Контент */}
       <div className="pb-2">
