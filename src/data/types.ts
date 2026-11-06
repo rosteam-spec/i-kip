@@ -43,6 +43,8 @@ export interface Article {
   tags: string[]
   featured?: boolean
   coverStyle: CoverStyle
+  /** Фото прибора (файл в public/): показывается на странице статьи вместо генеративной обложки */
+  image?: string
   blocks: ContentBlock[]
 }
 
