@@ -22,15 +22,13 @@ export function Footer({ onNavigate }: FooterProps) {
             <Logo />
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
               i-kip — независимый информационный проект о современных
-              измерительных приборах. Переводим новости мировых
-              производителей на русский язык и делаем собственные
-              аналитические обзоры и сравнения.
+              измерительных приборах. Новости мировых
+              производителей, аналитические обзоры и сравнения.
             </p>
             <p className="mt-4 flex items-start gap-2 rounded-lg border border-border bg-secondary/30 px-3.5 py-3 text-xs leading-relaxed text-muted-foreground">
               <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
               Материалы носят информационный характер и не являются
-              рекламой. Характеристики уточняйте в официальных
-              паспортах приборов.
+              рекламой.
             </p>
           </div>
 
